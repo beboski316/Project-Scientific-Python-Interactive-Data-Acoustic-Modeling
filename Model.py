@@ -132,6 +132,7 @@ class AudioModel:
             plt.yscale('symlog')
             plt.plot(frq, abs(Y))  # plot the power
             plt.xlim(0, 1500)  # limit x-axis to 1.5Khz
+            plt.title("Transform")
             plt.xlabel('Freq (Hz)')
             plt.ylabel('Power')
             plt.show()

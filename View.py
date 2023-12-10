@@ -7,6 +7,7 @@ class AudioView(AudioModel):
     def __init__(self, load_audio_callback):
         self.window = tk.Tk()
         self.window.title("RT60 Analysis Tool")
+        self.window.geometry("400x240+100+100")
 
         self.load_button = tk.Button(self.window, text="Load Audio File", command=load_audio_callback)
         self.load_button.pack()
