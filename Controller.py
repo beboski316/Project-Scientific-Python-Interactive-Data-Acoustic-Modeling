@@ -14,8 +14,10 @@ class AudioController:
         file_path = filedialog.askopenfilename(filetypes=[("Audio Files", "*.wav *.mp3 *.aac")])
         if file_path:
             try:
-                rt60_value = self.model.perform_rt60_analysis(file_path)
-                self.view.update_rt60_label(rt60_value)
+                rt60 = self.model.perform_rt60_analysis(file_path)
+                self.view.update_rt60_label(rt60)
+                self.view.update_RF_label(RF=3.2)
+                self.view.update_DF_label(DF=680)
             except Exception as e:
                 self.view.show_error(f"An error occurred: {e}")
 
